@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <title>Form</title>
+</head>
+
+<body>
+
+  <form>
+    <div>
+      <input type="text" id="name" name="name" placeholder="Full name">
+      <label for="name"></label>
+    </div>
+
+    <div>
+      <input type="text" id="email" name="email" placeholder="e-mail address">
+      <label for="email"></label>
+    </div>
+
+    <div>
+      <input type="text" id="confirm-email" name="confirm-email" placeholder="Confirm e-mail address">
+      <label for="confirm-email"></label>
+    </div>
+
+    <div>
+      <label for="country">Please select your country</label>
+      <select name="country">
+        <option value="Country"></option>
+        <option value="Sweden"></option>
+        <option value="Iceland"></option>
+        <option value="Japan"></option>
+      </select>
+    </div>
+
+    <div>
+      <label for="language">Please select your language</label>
+      <select name="language">
+        <option value="Language"></option>
+        <option value="Swedish"></option>
+        <option value="Icelandic"></option>
+        <option value="Japanese"></option>
+      </select>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Type your password here please:">
+    </div>
+
+    <div>
+      <label for="repeat-password">Repeat Password</label>
+      <input type="password" id="repeat-password" name="repeat-password" placeholder="Please repeat your password">
+    </div>
+
+    <button onClick="validate()" type="submit">Submit</button>
+  </form>
+
+</body>
+
+</html>
