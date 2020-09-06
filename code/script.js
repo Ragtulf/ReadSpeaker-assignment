@@ -12,6 +12,6 @@ const validate = () => {
   } else if (email !== repeatEmail) {
     alert("The two email addresses need to be identical")
   } else {
-    alert("Thank you, come again!")
+    location.reload()
   }
 }

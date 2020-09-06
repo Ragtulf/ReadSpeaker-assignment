@@ -1,0 +1,91 @@
+body {
+  height: 100%;
+  margin: 40px 0 0 0;
+  background-color: #e9e6f5;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: 101935;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FORM */
+
+.form {
+  width: 40%;
+  align-self: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.label {
+  margin: 8px 0 2px 0;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  line-height: 1.5em;
+}
+
+/* BUTTON */
+
+.button {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #72581D;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 10px 0 30px 10px;
+}
+
+.button:hover {
+  background-color: #C39732;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 850px) {
+  .form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 550px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 350px) {
+  .form {
+    width: 90%;
+  }
+}

@@ -4,59 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="./script.js"></script>
   <title>Form</title>
 </head>
 
 <body>
 
-  <form>
-    <div>
-      <label for="name">Full name</label>
-      <input type="text" id="name" name="name" placeholder="Full name">
+  <form class="form">
+    <div class="field">
+      <label class="label" for="name">Name</label>
+      <input 
+        type="text" id="name" class="input" name="name">
     </div>
 
-    <div>
-      <label for="email">Email address</label>
-      <input type="text" id="email" name="email" placeholder="e-mail address">
+    <div class="field">
+      <label class="label" for="email">Email</label>
+      <input type="text" id="email" class="input" name="email">
     </div>
 
-    <div>
-      <label for="confirm-email">Confirm email address</label>
-      <input type="text" id="confirm-email" name="confirm-email" placeholder="Confirm e-mail address">
+    <div class="field">
+      <label class="label" for="confirm-email">Confirm email</label>
+      <input type="text" id="confirm-email" class="input" name="confirm-email">
     </div>
 
-    <div>
-      <label for="country">Please select your country</label>
-      <select name="country">
-        <option value="Country">Country</option>
+    <div class="field">
+      <label class="label" for="country">Country</label>
+      <select id="country" class="input" name="country">
+        <option value="choose">- choose one -</option>
         <option value="Sweden">Sweden</option>
         <option value="Iceland">Iceland</option>
         <option value="Japan">Japan</option>
       </select>
     </div>
 
-    <div>
-      <label for="language">Please select your language</label>
-      <select name="language">
-        <option value="Language">Language</option>
+    <div class="field">
+      <label class="label" for="language">Language</label>
+      <select id="language" class="input" name="language">
+        <option value="choose">- choose one -</option>
         <option value="Swedish">Swedish</option>
         <option value="Icelandic">Icelandic</option>
         <option value="Japanese">Japanese</option>
       </select>
     </div>
 
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Type your password here please:">
+    <div class="field">
+      <label class="label" for="password">Password</label>
+      <input type="password" id="password" class="input" name="password">
     </div>
 
-    <div>
-      <label for="repeat-password">Repeat Password</label>
-      <input type="password" id="repeat-password" name="repeat-password" placeholder="Please repeat your password">
+    <div class="field">
+      <label class="label" for="repeat-password">Repeat Password</label>
+      <input type="password" id="repeat-password" class="input" name="repeat-password">
     </div>
 
-    <button onClick="validate()" type="submit">Submit</button>
+    <button class="button" onClick="validate()" type="button">Submit</button>
   </form>
 
   <!-- <script src="./script.js"></script> -->
