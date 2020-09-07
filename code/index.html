@@ -12,7 +12,8 @@
 
 <body>
 
-  <form class="form">
+<form class="form">
+  <!-- <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> -->
     <div class="field">
       <label class="label" for="name">Name</label>
       <input 
@@ -32,7 +33,7 @@
     <div class="field">
       <label class="label" for="country">Country</label>
       <select id="country" class="input" name="country">
-        <option value="choose">- choose one -</option>
+        <option value="">Select...</option>
         <option value="Sweden">Sweden</option>
         <option value="Iceland">Iceland</option>
         <option value="Japan">Japan</option>
@@ -42,7 +43,7 @@
     <div class="field">
       <label class="label" for="language">Language</label>
       <select id="language" class="input" name="language">
-        <option value="choose">- choose one -</option>
+        <option value="">Select...</option>
         <option value="Swedish">Swedish</option>
         <option value="Icelandic">Icelandic</option>
         <option value="Japanese">Japanese</option>
@@ -62,7 +63,6 @@
     <button class="button" onClick="validate()" type="button">Submit</button>
   </form>
 
-  <!-- <script src="./script.js"></script> -->
 </body>
 
 </html>
