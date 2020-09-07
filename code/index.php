@@ -12,8 +12,8 @@
 
 <body>
 
-<form class="form">
-  <!-- <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> -->
+<!-- <form class="form"> -->
+  <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <div class="field">
       <label class="label" for="name">Name</label>
       <input 
