@@ -13,11 +13,11 @@
 <body>
 
 <!-- <form class="form"> -->
-  <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <form class="form" method="post" action="validation.php">
     <div class="field">
-      <label class="label" for="name">Name</label>
+      <label class="label" for="full_name">Name</label>
       <input 
-        type="text" id="name" class="input" name="name">
+        type="text" id="full_name" class="input" name="full_name">
     </div>
 
     <div class="field">
@@ -26,8 +26,8 @@
     </div>
 
     <div class="field">
-      <label class="label" for="confirm-email">Confirm email</label>
-      <input type="text" id="confirm-email" class="input" name="confirm-email">
+      <label class="label" for="email_repeated">Confirm email</label>
+      <input type="text" id="email_repeated" class="input" name="email_repeated">
     </div>
 
     <div class="field">
@@ -56,11 +56,11 @@
     </div>
 
     <div class="field">
-      <label class="label" for="repeat-password">Repeat Password</label>
-      <input type="password" id="repeat-password" class="input" name="repeat-password">
+      <label class="label" for="password_repeated">Repeat Password</label>
+      <input type="password" id="password_repeated" class="input" name="password_repeated">
     </div>
 
-    <button class="button" onClick="validate()" type="button">Submit</button>
+    <button class="button" type="submit" onSubmit="validate()">Submit</button>
   </form>
 
 </body>
