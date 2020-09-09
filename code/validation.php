@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!isset($_POST["language"])) {
     $language_err = "language";
   } else {
-    $language = test_input($_POST["language"])
+    $language = test_input($_POST["language"]);
   }
 
   if (empty($_POST["password"])) {
@@ -54,9 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($full_name_err || $email_err || $email_repeated_err || $country_err || $language_err || $password_err || $password_repeated_err) {
-    echo "Validation failed" .(if ($full_name_err){
-      $full_name_err
-    });
+    echo "Validation failed";
+  }
+
+  if ($full_name_err) {
+    echo "<h4>" . $full_name_err . "</h4>";
   }
 }
 
