@@ -1,6 +1,6 @@
 <?php
 
-$full_name_err = $email_err = $email_repeated_err = $country_err = $language_err = $password_err = $password_err_second = $password_repeated_err = "";
+$full_name_err = $email_err = $email_repeated_err = $country_err = $language_err = $password_err = $password_err_second = $password_repeated_err = $password_repeated_err_two = "";
 $full_name = $email = $email_repeated = $country = $language = $password = $password_repeated = "";
 
 $upper_case = preg_match('@[A-Z]@', $password);
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["password"])) {
     $password_err = "password";
   } else if (!$upper_case || !$lower_case || !$digit || !$special_character || strlen($password) < 10) {
-    $password_err_second = "Password should be at least 10 characters in length and should include at least one upper case letter, one lower case letter, one digit and one special character";
+    $password_err_two = "Password should be at least 10 characters in length and should include at least one upper case letter, one lower case letter, one digit and one special character";
   } else {
     $password = test_input($_POST["password"]);
   }
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_repeated = test_input($_POST["password_repeated"]);
   }
 
-  if ($full_name_err || $email_err || $email_repeated_err || $country_err || $language_err || $password_err || $password_repeated_err) {
+  if ($full_name_err || $email_err || $email_repeated_err || $country_err || $language_err || $password_err || $password_repeated_err || $password_repeated_err_two) {
     echo "<h3>Validation failed</h3>";
   } else {
     echo "<h3>Validation succsessful</h3>";
@@ -85,8 +85,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<h4>" . $password_err . "</h4>";
   }
 
+  if ($password_err_second) {
+    echo "<h4>" . $password_err_two . "</h4>";
+  }
+
   if ($password_repeated_err) {
     echo "<h4>" . $password_repeated_err . "</h4>";
+  }
+
+  if ($password_repeated_err_two) {
+    echo "<h4>" . $password_repeated_err_two . "</h4>";
   }
 }
 

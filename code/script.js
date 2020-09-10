@@ -1,7 +1,8 @@
 const validate = () => {
   const email = document.getElementById("email").value
-  const repeatEmail = document.getElementById("confirm-email").value
+  const repeatEmail = document.getElementById("email_repeated").value
   const emailRegEx = /\S+@\S+\.\S+/
+  
 
   if (!email) {
     alert("Please fill in your email address")
@@ -12,6 +13,6 @@ const validate = () => {
   } else if (email !== repeatEmail) {
     alert("The two email addresses need to be identical")
   } else {
-    location.reload()
+    return true
   }
 }
